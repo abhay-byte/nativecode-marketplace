@@ -52,8 +52,7 @@
       ],
       "size_hint_mb": 2,
       "script_path": "packages/mesa-utils",
-      "experimental": false,
-      "icon": "icons/mesa-utils.png"
+      "experimental": false
     },
     {
       "id": "box64",
@@ -77,7 +76,7 @@
       "size_hint_mb": 15,
       "script_path": "packages/box64",
       "experimental": false,
-      "icon": "icons/box64.png"
+      "icon": "https://a.fsdn.com/allura/mirror/box64/icon?85141a6cefcd3b9298f5abd697a0d3e64d04c9c373e575c5522ea8e04e019fa3?&w=90"
     },
     {
       "id": "fex-emu",
@@ -101,8 +100,7 @@
       ],
       "size_hint_mb": 40,
       "script_path": "packages/fex-emu",
-      "experimental": true,
-      "icon": "icons/fex-emu.png"
+      "experimental": true
     },
     {
       "id": "glmark2",
@@ -135,8 +133,7 @@
         "command": "glmark2",
         "workdir": "/home/flux",
         "needs_display": true
-      },
-      "icon": "icons/glmark2.png"
+      }
     },
     {
       "id": "blender",
@@ -167,7 +164,7 @@
         "workdir": "/home/flux",
         "needs_display": true
       },
-      "icon": "icons/blender.png"
+      "icon": "https://i.pinimg.com/originals/a7/c9/41/a7c941a35032003f2c7ede2fd9eb0ccb.png"
     }
   ]
 }
