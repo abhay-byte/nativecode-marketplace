@@ -1,0 +1,23 @@
+{
+  "id": "fex-build-deps",
+  "name": "FEX build dependencies",
+  "kind": "component",
+  "category": "devtools",
+  "summary": "Clang/CMake/Ninja/cross toolchain to build FEX-Emu from source",
+  "description": "Debian packages required to compile FEX-Emu on aarch64 (clang, lld, cmake, ninja, g++-x86-64-linux-gnu, erofs tools). Safe to uninstall after fex-emu is built.",
+  "version": "1.0.0",
+  "arch": ["aarch64"],
+  "env": ["proot", "chroot"],
+  "deps": [],
+  "apt_provides": [
+    "clang",
+    "cmake",
+    "ninja-build",
+    "lld",
+    "g++-x86-64-linux-gnu",
+    "erofs-utils"
+  ],
+  "size_hint_mb": 120,
+  "script_path": "packages/fex-build-deps",
+  "experimental": false
+}

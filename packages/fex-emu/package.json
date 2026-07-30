@@ -3,8 +3,15 @@
   "name": "FEX-Emu",
   "kind": "component",
   "category": "compat",
-  "version": "1.0.0",
-  "deps": [],
+  "summary": "x86/x86_64 usermode emulator for ARM64 (binaries only)",
+  "description": "Installs FEX emulator binaries (FEX, FEXBash, FEXRootFSFetcher, …). Prefers apt when available; otherwise builds from source (needs fex-build-deps). Does NOT download x86 RootFS — install fex-rootfs next for full proot use. binfmt skipped under proot.",
+  "version": "2.0.0",
+  "arch": ["aarch64"],
+  "env": ["proot", "chroot"],
+  "deps": ["fex-build-deps"],
   "apt_provides": ["fex-emu-armv8.4", "fex-emu"],
-  "experimental": true
+  "size_hint_mb": 40,
+  "script_path": "packages/fex-emu",
+  "experimental": true,
+  "homepage": "https://fex-emu.com"
 }

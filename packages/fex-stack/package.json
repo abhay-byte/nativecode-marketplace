@@ -1,0 +1,17 @@
+{
+  "id": "fex-stack",
+  "name": "FEX full stack",
+  "kind": "component",
+  "category": "compat",
+  "summary": "One-click FEX: toolchain + build + x86 RootFS",
+  "description": "Meta package. Installs fex-rootfs (which pulls fex-emu → fex-build-deps). Use this for a complete ARM64 FEX setup under proot/chroot. Long install: multi-GB and may take hours on source build.",
+  "version": "1.0.0",
+  "arch": ["aarch64"],
+  "env": ["proot", "chroot"],
+  "deps": ["fex-rootfs"],
+  "apt_provides": [],
+  "size_hint_mb": 2700,
+  "script_path": "packages/fex-stack",
+  "experimental": true,
+  "homepage": "https://fex-emu.com"
+}

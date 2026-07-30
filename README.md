@@ -34,12 +34,25 @@ NC_MP_PATHS=/opt/foo:/usr/local/bin/foo
 https://raw.githubusercontent.com/abhay-byte/nativecode-marketplace/main/catalog.json
 ```
 
-## Demo packages
+## Packages
 
 | id | kind | notes |
 |----|------|-------|
 | mesa-utils | component | apt |
 | box64 | component | apt or upstream |
-| fex-emu | component | experimental |
+| fex-build-deps | component | clang/cmake/ninja/cross tools for FEX source build |
+| fex-emu | component | FEX binaries (apt or source); deps → fex-build-deps |
+| fex-rootfs | component | x86 RootFS download+extract (proot-safe); deps → fex-emu |
+| fex-stack | component | meta: full chain via fex-rootfs (recommended one-click) |
 | glmark2 | app | X11; deps mesa-utils |
 | blender | app | experimental on aarch64 |
+
+### FEX on proot (aarch64)
+
+Install order (or install `fex-stack` once):
+
+1. **fex-build-deps** — ~120 MiB toolchain  
+2. **fex-emu** — apt if available, else source build (~hours, multi-GB peak)  
+3. **fex-rootfs** — ~1.3 GiB download + extract to `/opt/fex-emu/RootFS`, sets `FEX_ROOTFS`
+
+Proot notes: no FUSE → always extract; no binfmt → invoke `FEX` directly.
