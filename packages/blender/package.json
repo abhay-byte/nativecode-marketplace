@@ -1,0 +1,16 @@
+{
+  "id": "blender",
+  "name": "Blender",
+  "kind": "app",
+  "category": "apps",
+  "version": "1.0.0",
+  "deps": [],
+  "apt_provides": ["blender"],
+  "experimental": true,
+  "launch": {
+    "type": "x11",
+    "command": "blender",
+    "workdir": "/home/flux",
+    "needs_display": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "fex-emu",
+  "name": "FEX-Emu",
+  "kind": "component",
+  "category": "compat",
+  "version": "1.0.0",
+  "deps": [],
+  "apt_provides": ["fex-emu-armv8.4", "fex-emu"],
+  "experimental": true
+}

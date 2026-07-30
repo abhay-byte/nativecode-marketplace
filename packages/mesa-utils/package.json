@@ -1,0 +1,9 @@
+{
+  "id": "mesa-utils",
+  "name": "mesa-utils",
+  "kind": "component",
+  "category": "graphics",
+  "version": "1.0.0",
+  "deps": [],
+  "apt_provides": ["mesa-utils"]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "glmark2",
+  "name": "glmark2",
+  "kind": "app",
+  "category": "graphics",
+  "version": "1.0.0",
+  "deps": ["mesa-utils"],
+  "apt_provides": ["glmark2"],
+  "launch": {
+    "type": "x11",
+    "command": "glmark2",
+    "workdir": "/home/flux",
+    "needs_display": true
+  }
+}

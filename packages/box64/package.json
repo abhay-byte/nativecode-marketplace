@@ -1,0 +1,9 @@
+{
+  "id": "box64",
+  "name": "box64",
+  "kind": "component",
+  "category": "compat",
+  "version": "1.0.0",
+  "deps": [],
+  "apt_provides": ["box64"]
+}
