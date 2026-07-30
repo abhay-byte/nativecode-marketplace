@@ -37,13 +37,23 @@
       "summary": "Mesa GL utilities (glxinfo, etc.)",
       "description": "Debian mesa-utils package. Shared dependency for GL tools and glmark2.",
       "version": "1.0.0",
-      "arch": ["aarch64", "arm", "x86_64"],
-      "env": ["proot", "chroot"],
+      "arch": [
+        "aarch64",
+        "arm",
+        "x86_64"
+      ],
+      "env": [
+        "proot",
+        "chroot"
+      ],
       "deps": [],
-      "apt_provides": ["mesa-utils"],
+      "apt_provides": [
+        "mesa-utils"
+      ],
       "size_hint_mb": 2,
       "script_path": "packages/mesa-utils",
-      "experimental": false
+      "experimental": false,
+      "icon": "icons/mesa-utils.png"
     },
     {
       "id": "box64",
@@ -53,13 +63,21 @@
       "summary": "Run x86_64 Linux binaries on ARM64",
       "description": "Installs box64 when available via apt, otherwise documents failure cleanly. Used as a dependency for some heavy apps.",
       "version": "1.0.0",
-      "arch": ["aarch64"],
-      "env": ["proot", "chroot"],
+      "arch": [
+        "aarch64"
+      ],
+      "env": [
+        "proot",
+        "chroot"
+      ],
       "deps": [],
-      "apt_provides": ["box64"],
+      "apt_provides": [
+        "box64"
+      ],
       "size_hint_mb": 15,
       "script_path": "packages/box64",
-      "experimental": false
+      "experimental": false,
+      "icon": "icons/box64.png"
     },
     {
       "id": "fex-emu",
@@ -69,13 +87,22 @@
       "summary": "Fast x86 userspace emulator (FEX)",
       "description": "Attempts FEX install when packaged; otherwise exits with clear experimental status. Does not pull box64.",
       "version": "1.0.0",
-      "arch": ["aarch64"],
-      "env": ["proot", "chroot"],
+      "arch": [
+        "aarch64"
+      ],
+      "env": [
+        "proot",
+        "chroot"
+      ],
       "deps": [],
-      "apt_provides": ["fex-emu-armv8.4", "fex-emu"],
+      "apt_provides": [
+        "fex-emu-armv8.4",
+        "fex-emu"
+      ],
       "size_hint_mb": 40,
       "script_path": "packages/fex-emu",
-      "experimental": true
+      "experimental": true,
+      "icon": "icons/fex-emu.png"
     },
     {
       "id": "glmark2",
@@ -85,10 +112,21 @@
       "summary": "OpenGL ES 2.0 benchmark",
       "description": "GPU smoke test under X11. Requires Graphical Desktop running before Launch.",
       "version": "1.0.0",
-      "arch": ["aarch64", "arm", "x86_64"],
-      "env": ["proot", "chroot"],
-      "deps": ["mesa-utils"],
-      "apt_provides": ["glmark2"],
+      "arch": [
+        "aarch64",
+        "arm",
+        "x86_64"
+      ],
+      "env": [
+        "proot",
+        "chroot"
+      ],
+      "deps": [
+        "mesa-utils"
+      ],
+      "apt_provides": [
+        "glmark2"
+      ],
       "size_hint_mb": 8,
       "script_path": "packages/glmark2",
       "experimental": false,
@@ -97,7 +135,8 @@
         "command": "glmark2",
         "workdir": "/home/flux",
         "needs_display": true
-      }
+      },
+      "icon": "icons/glmark2.png"
     },
     {
       "id": "blender",
@@ -105,12 +144,20 @@
       "kind": "app",
       "category": "apps",
       "summary": "3D creation suite (experimental on aarch64)",
-      "description": "Installs Debian blender when available for this arch. May be heavy or unavailable on aarch64 — marked experimental.",
+      "description": "Installs Debian blender when available for this arch. May be heavy or unavailable on aarch64 \u2014 marked experimental.",
       "version": "1.0.0",
-      "arch": ["aarch64", "x86_64"],
-      "env": ["proot", "chroot"],
+      "arch": [
+        "aarch64",
+        "x86_64"
+      ],
+      "env": [
+        "proot",
+        "chroot"
+      ],
       "deps": [],
-      "apt_provides": ["blender"],
+      "apt_provides": [
+        "blender"
+      ],
       "size_hint_mb": 200,
       "script_path": "packages/blender",
       "experimental": true,
@@ -119,7 +166,8 @@
         "command": "blender",
         "workdir": "/home/flux",
         "needs_display": true
-      }
+      },
+      "icon": "icons/blender.png"
     }
   ]
 }
