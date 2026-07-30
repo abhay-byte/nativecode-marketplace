@@ -1,6 +1,6 @@
 # NativeCode Marketplace
 
-Public catalog + install/uninstall scripts for [NativeCode](https://github.com/abhay-byte) Debian guests (**proot** and **chroot**).
+Public catalog + install/uninstall scripts for [NativeCode](https://github.com/abhay-byte/nativecode-ai) Debian guests (**proot** and **chroot**).
 
 ## Layout
 
