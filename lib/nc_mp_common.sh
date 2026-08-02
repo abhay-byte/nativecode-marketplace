@@ -56,9 +56,9 @@ nc_mp_download() {
   echo "NC_MP_STATUS=download url=$url"
   mkdir -p "$(dirname "$dest")"
   if command -v curl >/dev/null 2>&1; then
-    curl -fsSL --retry 3 -o "$dest" "$url"
+    curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 -o "$dest" "$url"
   elif command -v wget >/dev/null 2>&1; then
-    wget -q -O "$dest" "$url"
+    wget -q --tries 5 -O "$dest" "$url"
   else
     echo "NC_MP_STATUS=error no_curl_wget"
     exit 1

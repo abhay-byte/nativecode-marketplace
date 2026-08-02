@@ -34,8 +34,45 @@ nc_mp_apt_install \
   libgtk-3-0 libnotify4 libnss3 libxss1 libxtst6 \
   xdg-utils libatspi2.0-0 libuuid1 libsecret-1-0
 
-if [ ! -f "$ZCODE_DEB" ]; then
-  nc_mp_download "$ZCODE_URL" "$ZCODE_DEB"
+# Verify the deb is complete by decompressing the full data.tar member.
+# (dpkg-deb --info alone is not enough: control comes before data.tar,
+# so a truncated data member can still pass the control check.)
+verify_deb() {
+  [ -s "$ZCODE_DEB" ] && dpkg-deb --fsys-tarfile "$ZCODE_DEB" >/dev/null 2>&1
+}
+
+download_zcode_deb() {
+  echo "NC_MP_STATUS=download url=$ZCODE_URL"
+  rm -f "$ZCODE_DEB"
+  if command -v curl >/dev/null 2>&1; then
+    curl -fSL --retry 5 --retry-all-errors --retry-delay 2 -o "$ZCODE_DEB" "$ZCODE_URL"
+  elif command -v wget >/dev/null 2>&1; then
+    wget -q --tries 5 -O "$ZCODE_DEB" "$ZCODE_URL"
+  else
+    echo "NC_MP_STATUS=error no_curl_wget"
+    echo "NC_MP_STATUS=done id=zcode exit=1"
+    exit 1
+  fi
+}
+
+# Download the deb; retry up to 3 times if it is truncated or otherwise invalid.
+attempt=0
+while [ "$attempt" -lt 3 ]; do
+  if [ ! -f "$ZCODE_DEB" ] || ! verify_deb; then
+    download_zcode_deb
+  fi
+  if verify_deb; then
+    break
+  fi
+  attempt=$((attempt + 1))
+  echo "NC_MP_STATUS=warn download_retry attempt=$attempt"
+done
+
+if ! verify_deb; then
+  echo "NC_MP_STATUS=error corrupt_download url=$ZCODE_URL"
+  echo "ERROR: downloaded deb failed verification — check network/disk and retry." >&2
+  echo "NC_MP_STATUS=done id=zcode exit=1"
+  exit 1
 fi
 
 echo "NC_MP_STATUS=dpkg_install pkg=zcode version=$ZCODE_VERSION"
