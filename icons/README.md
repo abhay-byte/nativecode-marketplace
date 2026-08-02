@@ -13,4 +13,5 @@ Current:
 |---------|--------|
 | blender | Pinterest Blender mark (also mirrored as `blender.png`) |
 | box64 | SourceForge project icon (also mirrored as `box64.png`) |
+| zcode | Extracted from zcode deb `usr/share/icons/hicolor/256x256/apps/zcode.png` |
 | others | no icon field → app fallback |

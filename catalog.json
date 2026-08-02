@@ -180,6 +180,41 @@
         "needs_display": true
       },
       "icon": "https://i.pinimg.com/originals/a7/c9/41/a7c941a35032003f2c7ede2fd9eb0ccb.png"
+    },
+    {
+      "id": "zcode",
+      "name": "ZCode",
+      "kind": "app",
+      "category": "apps",
+      "summary": "ZCode desktop app — AI coding agent",
+      "description": "Installs the official ZCode ARM64 .deb (Electron) from the zcode.z.ai CDN. Downloads ~115 MiB deb, installs runtime libs via apt, then dpkg -i. GUI requires a Graphical Desktop; use 'zcode --no-sandbox' under proot.",
+      "version": "1.0.0",
+      "arch": ["aarch64"],
+      "env": ["proot", "chroot"],
+      "deps": [],
+      "apt_provides": [
+        "zcode",
+        "libgtk-3-0",
+        "libnotify4",
+        "libnss3",
+        "libxss1",
+        "libxtst6",
+        "xdg-utils",
+        "libatspi2.0-0",
+        "libuuid1",
+        "libsecret-1-0"
+      ],
+      "size_hint_mb": 500,
+      "script_path": "packages/zcode",
+      "experimental": true,
+      "launch": {
+        "type": "x11",
+        "command": "zcode --no-sandbox",
+        "workdir": "/home/flux",
+        "needs_display": true
+      },
+      "icon": "icons/zcode.png",
+      "homepage": "https://zcode.z.ai"
     }
   ]
 }
