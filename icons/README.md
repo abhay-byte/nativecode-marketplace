@@ -19,4 +19,6 @@ Current:
 | vscode | Extracted from VS Code deb `usr/share/pixmaps/vscode.png` |
 | vscodium | Extracted from VSCodium deb `usr/share/pixmaps/vscodium.png` |
 | firefox | Extracted from Firefox tarball `browser/chrome/icons/default/default128.png` |
+| chromium | Copied from `usr/share/icons/hicolor/256x256/apps/chromium.png` (Debian chromium) |
+| google-chrome | Extracted from Chrome deb `opt/google/chrome/product_logo_256.png` |
 | others | no icon field → app fallback |

@@ -52,6 +52,8 @@ https://raw.githubusercontent.com/abhay-byte/nativecode-marketplace/main/catalog
 | vscode | app | Visual Studio Code (ARM64 deb); X11, `--no-sandbox` on proot |
 | vscodium | app | VSCodium (ARM64 deb); X11, `--no-sandbox` on proot |
 | firefox | app | Firefox (ARM64 tarball); X11, Gecko — no `--no-sandbox` |
+| chromium | app | Chromium (Debian apt, ARM64); X11, `--no-sandbox` on proot |
+| google-chrome | app | Google Chrome stable (ARM64 deb); X11, `--no-sandbox` on proot |
 
 ### FEX on proot (aarch64)
 

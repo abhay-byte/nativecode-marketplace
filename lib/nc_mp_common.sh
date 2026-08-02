@@ -47,7 +47,7 @@ nc_mp_apt_remove() {
     return 0
   fi
   echo "NC_MP_STATUS=apt_remove pkgs=${have[*]}"
-  apt-get remove -y "${have[@]}" || true
+  apt-get purge -y "${have[@]}" || true
   apt-get autoremove -y || true
 }
 

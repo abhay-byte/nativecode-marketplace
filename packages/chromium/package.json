@@ -1,0 +1,9 @@
+{
+  "id": "chromium",
+  "name": "Chromium",
+  "kind": "app",
+  "category": "apps",
+  "version": "1.0.0",
+  "deps": [],
+  "apt_provides": ["chromium"]
+}
