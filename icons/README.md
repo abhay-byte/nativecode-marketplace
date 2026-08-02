@@ -16,4 +16,5 @@ Current:
 | zcode | Extracted from zcode deb `usr/share/icons/hicolor/256x256/apps/zcode.png` |
 | cursor | Extracted from cursor deb `usr/share/cursor/resources/app/out/media/logo.png` |
 | antigravity-ide | Extracted from Antigravity tarball `resources/app/resources/linux/code.png` |
+| vscode | Extracted from VS Code deb `usr/share/pixmaps/vscode.png` |
 | others | no icon field → app fallback |
