@@ -15,4 +15,5 @@ Current:
 | box64 | SourceForge project icon (also mirrored as `box64.png`) |
 | zcode | Extracted from zcode deb `usr/share/icons/hicolor/256x256/apps/zcode.png` |
 | cursor | Extracted from cursor deb `usr/share/cursor/resources/app/out/media/logo.png` |
+| antigravity-ide | Extracted from Antigravity tarball `resources/app/resources/linux/code.png` |
 | others | no icon field → app fallback |
