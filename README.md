@@ -51,6 +51,7 @@ https://raw.githubusercontent.com/abhay-byte/nativecode-marketplace/main/catalog
 | antigravity-ide | app | Google Antigravity IDE (ARM64 tarball); X11, `--no-sandbox` on proot |
 | vscode | app | Visual Studio Code (ARM64 deb); X11, `--no-sandbox` on proot |
 | vscodium | app | VSCodium (ARM64 deb); X11, `--no-sandbox` on proot |
+| firefox | app | Firefox (ARM64 tarball); X11, Gecko — no `--no-sandbox` |
 
 ### FEX on proot (aarch64)
 

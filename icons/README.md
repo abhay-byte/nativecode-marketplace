@@ -18,4 +18,5 @@ Current:
 | antigravity-ide | Extracted from Antigravity tarball `resources/app/resources/linux/code.png` |
 | vscode | Extracted from VS Code deb `usr/share/pixmaps/vscode.png` |
 | vscodium | Extracted from VSCodium deb `usr/share/pixmaps/vscodium.png` |
+| firefox | Extracted from Firefox tarball `browser/chrome/icons/default/default128.png` |
 | others | no icon field → app fallback |
