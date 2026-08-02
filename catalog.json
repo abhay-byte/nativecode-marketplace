@@ -359,6 +359,52 @@
       },
       "icon": "icons/vscode.png",
       "homepage": "https://code.visualstudio.com"
+    },
+    {
+      "id": "vscodium",
+      "name": "VSCodium",
+      "kind": "app",
+      "category": "apps",
+      "summary": "VSCodium — open-source VS Code (ARM64)",
+      "description": "Installs the VSCodium ARM64 .deb (Electron, package 'codium') from the VSCodium GitHub release. Downloads ~138 MiB deb (installs ~600 MiB), apt-resolves all runtime libs, then runs the deb's postinst (sets up /usr/bin/codium). GUI requires a Graphical Desktop; use 'codium --no-sandbox' under proot.",
+      "version": "1.0.0",
+      "arch": ["aarch64"],
+      "env": ["proot", "chroot"],
+      "deps": [],
+      "apt_provides": [
+        "codium",
+        "libgtk-3-0",
+        "libnss3",
+        "libasound2",
+        "libatk-bridge2.0-0",
+        "libatk1.0-0",
+        "libatspi2.0-0",
+        "libcairo2",
+        "libcups2",
+        "libcurl4",
+        "libdbus-1-3",
+        "libgbm1",
+        "libglib2.0-0",
+        "libnspr4",
+        "libpango-1.0-0",
+        "libstdc++6",
+        "libudev1",
+        "libxkbcommon0",
+        "libxkbfile1",
+        "libxrandr2",
+        "xdg-utils"
+      ],
+      "size_hint_mb": 610,
+      "script_path": "packages/vscodium",
+      "experimental": true,
+      "launch": {
+        "type": "x11",
+        "command": "codium --no-sandbox",
+        "workdir": "/home/flux",
+        "needs_display": true
+      },
+      "icon": "icons/vscodium.png",
+      "homepage": "https://vscodium.com"
     }
   ]
 }

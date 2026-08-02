@@ -17,4 +17,5 @@ Current:
 | cursor | Extracted from cursor deb `usr/share/cursor/resources/app/out/media/logo.png` |
 | antigravity-ide | Extracted from Antigravity tarball `resources/app/resources/linux/code.png` |
 | vscode | Extracted from VS Code deb `usr/share/pixmaps/vscode.png` |
+| vscodium | Extracted from VSCodium deb `usr/share/pixmaps/vscodium.png` |
 | others | no icon field → app fallback |
