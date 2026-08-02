@@ -47,6 +47,7 @@ https://raw.githubusercontent.com/abhay-byte/nativecode-marketplace/main/catalog
 | glmark2 | app | X11; deps mesa-utils |
 | blender | app | experimental on aarch64 |
 | zcode | app | ZCode desktop (ARM64 deb); X11, `--no-sandbox` on proot |
+| cursor | app | Cursor AI editor (ARM64 deb); X11, `--no-sandbox` on proot |
 
 ### FEX on proot (aarch64)
 
